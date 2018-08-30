@@ -44,6 +44,8 @@ int main()
             printf("Ingrese el segundo numero a sumar: ");
             scanf("%f", &valorB);
             sumar(valorA,valorB);
+            resultado=sumar(valorA,valorB);
+            printf("\n La Suma de %.2f + %.2f es igual a %.2f \n",valorA,valorB,resultado);
             break;
         case 2:
             system("cls");
@@ -52,6 +54,8 @@ int main()
             printf("Ingrese el segundo numero a restar: ");
             scanf("%f", &valorB);
             restar(valorA,valorB);
+            resultado=restar(valorA,valorB);
+            printf("\n La Resta de %.2f - %.2f es igual a %.2f \n",valorA,valorB,resultado);
             break;
         case 3:
             system("cls");
@@ -68,6 +72,9 @@ int main()
             printf("Ingrese el segundo numero a multiplicar: ");
             scanf("%f", &valorB);
             multiplicar(valorA,valorB);
+            resultado=multiplicar(valorA,valorB);
+            printf("\n La Multiplicacion de %.2f * %.2f es igual a %.2f \n",valorA,valorB,resultado);
+
             break;
         case 5:
             system("cls");
@@ -95,13 +102,13 @@ float sumar(float sumandoUno, float sumandoDos)
 {
     float suma;
     suma=sumandoUno+sumandoDos;
-    printf("\n La Suma de %.2f + %.2f es igual a %.2f \n",sumandoUno,sumandoDos,suma);
+    return suma;
 }
 float restar(float restandoUno, float restandoDos)
 {
     float resta;
     resta=restandoUno-restandoDos;
-    printf("\n La Resta de %.2f - %.2f es igual a %.2f \n",restandoUno,restandoDos,resta);
+    return resta;
 }
 float dividir(float dividendo, float divisor)
 {
@@ -118,7 +125,7 @@ float multiplicar(float multiplicandoUno, float multiplicandoDos)
 {
     float multiplicacion;
     multiplicacion=multiplicandoUno*multiplicandoDos;
-    printf("\n La Multiplicacion de %.2f * %.2f es igual a %.2f \n",multiplicandoUno,multiplicandoDos,multiplicacion);
+    return multiplicacion;
 }
 float factorial(float factorialUno, float factorialDos)
 {
@@ -141,13 +148,13 @@ float factorial(float factorialUno, float factorialDos)
         printf("\n Para obtener el factorial de un entero no debe ingresar numeros negativos \n");
     if (factorialDos>0)
     {
-            for (factorialDeDos = factorialDos; factorialDeDos > 1; factorialDeDos--)
-            {
-                factorB = factorB * factorialDeDos;
-            }
-            printf("\n El factorial de %.2f es: %.2f \n",factorialDos,factorB);
+        for (factorialDeDos = factorialDos; factorialDeDos > 1; factorialDeDos--)
+        {
+            factorB = factorB * factorialDeDos;
         }
-        else
-            printf("\n Para obtener el factorial de un entero no debe ingresar numeros negativos \n");
-
+        printf("\n El factorial de %.2f es: %.2f \n",factorialDos,factorB);
     }
+    else
+        printf("\n Para obtener el factorial de un entero no debe ingresar numeros negativos \n");
+
+}
