@@ -15,6 +15,7 @@ int main()
     float resultado;
     do
     {
+        system ("COLOR F1");
         printf("\n         #############################################################");
         printf("\n         *                - Trabajo Practico Nro. 1 -                *");
         printf("\n         *                                                           *");
@@ -33,15 +34,21 @@ int main()
         printf("\n         |                                                           |");
         printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         printf("\n");
-        printf("\n                              Elija una opcion: ");
+        printf("\n                         Digite la opcion elegida: ");
         scanf("%d",&opcion);
         switch(opcion)
         {
         case 1:
             system("cls");
-            printf("Ingrese el primer numero a sumar: ");
+            printf("\n         #############################################################");
+            printf("\n         |                                                           |");
+            printf("\n         |                          S U M A                          |");
+            printf("\n         |                                                           |");
+            printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            printf("\n");
+            printf("\n                       Ingrese el primer numero a sumar: ");
             scanf("%f", &valorA);
-            printf("Ingrese el segundo numero a sumar: ");
+            printf("\n                       Ingrese el segundo numero a sumar: ");
             scanf("%f", &valorB);
             sumar(valorA,valorB);
             resultado=sumar(valorA,valorB);
@@ -49,9 +56,15 @@ int main()
             break;
         case 2:
             system("cls");
-            printf("Ingrese el primer numero a restar: ");
+            printf("\n         #############################################################");
+            printf("\n         |                                                           |");
+            printf("\n         |                        R E S T A                          |");
+            printf("\n         |                                                           |");
+            printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            printf("\n");
+            printf("\n                       Ingrese el primer numero a restar: ");
             scanf("%f", &valorA);
-            printf("Ingrese el segundo numero a restar: ");
+            printf("\n                       Ingrese el segundo numero a restar: ");
             scanf("%f", &valorB);
             restar(valorA,valorB);
             resultado=restar(valorA,valorB);
@@ -59,17 +72,29 @@ int main()
             break;
         case 3:
             system("cls");
-            printf("Ingrese el dividendo: ");
+            printf("\n         #############################################################");
+            printf("\n         |                                                           |");
+            printf("\n         |                      D I V I S I O N                      |");
+            printf("\n         |                                                           |");
+            printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            printf("\n");
+            printf("\n                       Ingrese el dividendo: ");
             scanf("%f", &valorA);
-            printf("Ingrese el divisor: ");
+            printf("\n                       Ingrese el divisor: ");
             scanf("%f", &valorB);
             dividir(valorA,valorB);
             break;
         case 4:
             system("cls");
-            printf("Ingrese el primer numero a multiplicar: ");
+            printf("\n         #############################################################");
+            printf("\n         |                                                           |");
+            printf("\n         |                M U L T I P L I C A C I O N                |");
+            printf("\n         |                                                           |");
+            printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            printf("\n");
+            printf("\n                       Ingrese el primer numero a multiplicar: ");
             scanf("%f", &valorA);
-            printf("Ingrese el segundo numero a multiplicar: ");
+            printf("\n                       Ingrese el segundo numero a multiplicar: ");
             scanf("%f", &valorB);
             multiplicar(valorA,valorB);
             resultado=multiplicar(valorA,valorB);
@@ -78,9 +103,15 @@ int main()
             break;
         case 5:
             system("cls");
-            printf("Ingrese el primer valor a factorear: ");
+            printf("\n         #############################################################");
+            printf("\n         |                                                           |");
+            printf("\n         |                     F A C T O R I A L                     |");
+            printf("\n         |                                                           |");
+            printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            printf("\n");
+            printf("\n               Ingrese el primer valor del cual obtener el factorial: ");
             scanf("%f", &valorA);
-            printf("Ingrese el segundo valor a factorear: ");
+            printf("\n               Ingrese el segundo valor del cual obtener el factorial: ");
             scanf("%f", &valorB);
             factorial(valorA,valorB);
             break;
