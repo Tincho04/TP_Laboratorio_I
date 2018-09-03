@@ -11,7 +11,6 @@ float pedirValor (void)
 }
 float sumarValores(float a, float b)
 {
-
     return a+b;
 }
 
@@ -48,13 +47,13 @@ float factorial(float a, float b)
     factorA=1;
     factorB=1;
 
-    if (a>0 && b>0)
+    if (a>=0 && b>=0)
     {
-        for (factorialDeA = a; factorialDeA > 1; factorialDeA--)
+        for (factorialDeA = a; factorialDeA >= 1; factorialDeA--)
         {
             factorA = factorA * factorialDeA;
         }
-        for (factorialDeB = b; factorialDeB > 1; factorialDeB--)
+        for (factorialDeB = b; factorialDeB >= 1; factorialDeB--)
         {
             factorB = factorB * factorialDeB;
         }

@@ -95,3 +95,7 @@ int main()
         return 0;
     }
 
+
+
+
+    //movilizar los ifs al main para delucidar los valores negativos y fallos de div y factorial
