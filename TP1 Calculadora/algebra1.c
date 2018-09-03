@@ -30,8 +30,8 @@ int multiplicarValores(int a, int b)
 }
 int factorial(int a, int b)
 {
-    int factorA;
-    int factorB;
+    long long int factorA;
+    long long int factorB;
     int factorialDeA;
     int factorialDeB;
     factorA=1;
