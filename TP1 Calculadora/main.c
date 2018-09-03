@@ -26,19 +26,12 @@ int main()
         printf("\n         |                                                           |");
         printf("\n                    2- Ingresar 2do operando: (B= %.2f)              ",valorDos);
         printf("\n         |                                                           |");
-        printf("\n                    3- Calcular la suma (%.2f+%.2f)                  ",valorUno,valorDos);
+        printf("\n                    3- Calcular todas las operaciones                 ");
         printf("\n         |                                                           |");
-        printf("\n                    4- Calcular la resta (%.2f-%.2f)                 ",valorUno,valorDos);
+        printf("\n                    4- informar resultados                            ");
         printf("\n         |                                                           |");
-        printf("\n                    5- Calcular la division (%.2f/%.2f)              ",valorUno,valorDos);
+        printf("\n                    5- Salir                                          ");
         printf("\n         |                                                           |");
-        printf("\n                    6- Calcular la multiplicacion (%.2f*%.2f)        ",valorUno,valorDos);
-        printf("\n         |                                                           |");
-        printf("\n                    7- Calcular el factorial (%.2f!) (%.2f!)         ",valorUno,valorDos);
-        printf("\n         |                                                           |");
-        printf("\n                    8- Calcular todas las operaciones                ");
-        printf("\n         |                                                           |");
-        printf("\n                                 9- Salir                            ");
         printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         printf("\n");
         printf("\n                         Digite la opcion elegida: ");
@@ -55,48 +48,50 @@ int main()
             break;
         case 3:
             system("cls");
-            printf("La suma de los valores es: %.2f\n",sumarValores(valorUno,valorDos));
+            printf("\n         #############################################################");
+            printf("\n         *                                                           *");
+            printf("\n         *                >> Calculos realizados <<                  *");
+            printf("\n         *                                                           *");
+            printf("\n         #############################################################");
+            printf("\n         |                                                           |");
+            printf("\n                    a- Calcular la suma (%.2f+%.2f)                  ",valorUno,valorDos);
+            printf("\n         |                                                           |");
+            printf("\n                    b- Calcular la resta (%.2f-%.2f)                 ",valorUno,valorDos);
+            printf("\n         |                                                           |");
+            printf("\n                    c- Calcular la division (%.2f/%.2f)              ",valorUno,valorDos);
+            printf("\n         |                                                           |");
+            printf("\n                    d- Calcular la multiplicacion (%.2f*%.2f)        ",valorUno,valorDos);
+            printf("\n         |                                                           |");
+            printf("\n                    e- Calcular el factorial (%.2f!) (%.2f!)         ",valorUno,valorDos);
+            printf("\n         |                                                           |");
+            printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            printf("\n");
+            float sumarValores(float valorUno, float valorDos);
+            float restarValores(float valorUno, float valorDos);
+            float multiplicarValores(float valorUno, float valorDos);
+            float dividirValores(float valorUno, float valorDos);
+            float factorial (float valorUno, float valorDos);
             system("Pause");
             break;
         case 4:
             system("cls");
-            printf("La resta de los valores es: %.2f\n",restarValores(valorUno,valorDos));
+            printf("\n          a- La suma de los valores es: %.2f\n",sumarValores(valorUno,valorDos));
+            printf("\n          b- La resta de los valores es: %.2f\n",restarValores(valorUno,valorDos));
+            dividirValores(valorUno,valorDos);
+            printf("\n          c- La multiplicacion de los valores es: %.2f\n",multiplicarValores(valorUno,valorDos));
+            factorial(valorUno,valorDos);
             system("Pause");
             break;
         case 5:
-            system("cls");
-            dividirValores(valorUno,valorDos);
-            system("Pause");
-            break;
-        case 6:
-            system("cls");
-            printf("La multiplicacion de los valores es: %.2f\n",multiplicarValores(valorUno,valorDos));
-            system("Pause");
-            break;
-        case 7:
-            system("cls");
-            factorial(valorUno,valorDos);
-            system("Pause");
-            break;
-        case 8:
-            system("cls");
-            printf("La suma de los valores es: %.2f\n",sumarValores(valorUno,valorDos));
-            printf("La resta de los valores es: %.2f\n",restarValores(valorUno,valorDos));
-            dividirValores(valorUno,valorDos);
-            printf("La multiplicacion de los valores es: %.2f\n",multiplicarValores(valorUno,valorDos));
-            factorial(valorUno,valorDos);
-            system("Pause");
-            break;
-        case 9:
             seguir=0;
             printf("Finalizando calculadora...\n");
             break;
         default:
             printf("El valor ingresado no pertenece a una opcion existente \n");
             system("Pause");
-            break;
         }
+        }
+        system("Pause");
+        return 0;
     }
-    system("Pause");
-return 0;
-}
+

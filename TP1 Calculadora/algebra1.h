@@ -1,69 +1,62 @@
-#ifndef ALGEBRA1_H_INCLUDED
-#define ALGEBRA1_H_INCLUDED
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef algebra1
 
-float pedirValor (void)
-{
-    float valor;
-    printf("Ingrese un numero: ");
-    scanf("%f", &valor);
-    return valor;
-}
-float sumarValores(float a, float b)
-{
+/** \brief obteniene datos y los calcula
+ *
+ * \param void pide un valor
+ * \return float el valor ingresado
+ *
+ */
 
-    return a+b;
-}
 
-float restarValores(float a, float b)
-{
-    return a-b;
-}
+float pedirValor (void);
 
-float dividirValores(float a,float b)
-{
-    float div;
-    if(b!=0)
-    {
-        div= a/b;
-        return printf("La division es: %.2f \n",div);
-    }
-    else
-    {
-        return  printf("No es posible dividir por cero. \n");
-    }
+/** \brief obteniene datos y los calcula
+ *
+ * \param float valor a sumar
+ * \param float valor a sumar
+ * \return float resultado de la suma
+ *
+ */
 
-}
+float sumarValores(float, float);
 
-float multiplicarValores(float a, float b)
-{
-    float multi;
-    multi=a*b;
-    return multi;
-}
-float factorial(float a, float b)
-{
-    float factorA;
-    float factorB;
-    float factorialDeA;
-    float factorialDeB;
-    factorA=1;
-    factorB=1;
+/** \brief obteniene datos y los calcula
+ *
+ * \param float valor a restar
+ * \param float valor a restar
+ * \return float resultado de la resta
+ *
+ */
 
-    if (a>0 && b>0)
-    {
-        for (factorialDeA = a; factorialDeA > 1; factorialDeA--)
-        {
-            factorA = factorA * factorialDeA;
-        }
-        for (factorialDeB = b; factorialDeB > 1; factorialDeB--)
-        {
-            factorB = factorB * factorialDeB;
-        }
-        return printf("El factorial del valor %.2f es: %.2f y el de %.2f es: %.2f \n",a,factorA,b,factorB);
-        }else
-        return printf("\n No se puede obtener el factorial de uno o ambos valores ingresados. \n");
-}
+float restarValores(float, float);
 
-#endif // ALGEBRA1_H_INCLUDED
+/** \brief obteniene datos y los calcula
+ *
+ * \param float valor a multiplicar
+ * \param float valor a multiplicar
+ * \return float resultado de la multiplicacion
+ *
+ */
+
+float dividirValores(float,float);
+
+/** \brief obteniene datos y los calcula
+ *
+ * \param float valor dividendo
+ * \param float valor divisor
+ * \return float resultado de la division
+ *
+ */
+
+float multiplicarValores(float, float);
+
+/** \brief
+ *
+ * \param float obtener factorial del valor
+ * \param float obtener factorial del valor
+ * \return float retorna factorial
+ *
+ */
+float factorial(float, float);
+
+#endif // algebra1
