@@ -3,38 +3,38 @@
 /** \brief obteniene datos y los calcula
  *
  * \param void pide un valor
- * \return float el valor ingresado
+ * \return int el valor ingresado
  *
  */
 
 
-float pedirValor (void);
+int pedirValor (void);
 
 /** \brief obteniene datos y los calcula
  *
- * \param float valor a sumar
- * \param float valor a sumar
- * \return float resultado de la suma
+ * \param int valor a sumar
+ * \param int valor a sumar
+ * \return int resultado de la suma
  *
  */
 
-float sumarValores(float, float);
+int sumarValores(int, int);
 
 /** \brief obteniene datos y los calcula
  *
- * \param float valor a restar
- * \param float valor a restar
- * \return float resultado de la resta
+ * \param int valor a restar
+ * \param int valor a restar
+ * \return int resultado de la resta
  *
  */
 
-float restarValores(float, float);
+int restarValores(int, int);
 
 /** \brief obteniene datos y los calcula
  *
- * \param float valor a multiplicar
- * \param float valor a multiplicar
- * \return float resultado de la multiplicacion
+ * \param int valor a multiplicar
+ * \param int valor a multiplicar
+ * \return int resultado de la multiplicacion
  *
  */
 
@@ -42,21 +42,21 @@ float dividirValores(float,float);
 
 /** \brief obteniene datos y los calcula
  *
- * \param float valor dividendo
- * \param float valor divisor
+ * \param int valor dividendo
+ * \param int valor divisor
  * \return float resultado de la division
  *
  */
 
-float multiplicarValores(float, float);
+int multiplicarValores(int, int);
 
 /** \brief
  *
- * \param float obtener factorial del valor
- * \param float obtener factorial del valor
- * \return float retorna factorial
+ * \param int obtener factorial del valor
+ * \param int obtener factorial del valor
+ * \return int retorna factorial
  *
  */
-float factorial(float, float);
+int factorial(int, int);
 
 #endif // algebra1

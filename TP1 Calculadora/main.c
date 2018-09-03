@@ -4,10 +4,11 @@
 
 int main()
 {
-    float valorUno=0;
-    float valorDos=0;
+    int valorUno=0;
+    int valorDos=0;
     int opcion=0;
     int seguir=1;
+    int validacion=0;
 
     while(seguir==1)
     {
@@ -22,9 +23,9 @@ int main()
         printf("\n         #############################################################");
         printf("\n                               Elija una opcion:                     ");
         printf("\n         |                                                           |");
-        printf("\n                    1- Ingresar 1er operando: (A= %.2f)              ",valorUno);
+        printf("\n                    1- Ingresar 1er operando: (A= %d)              ",valorUno);
         printf("\n         |                                                           |");
-        printf("\n                    2- Ingresar 2do operando: (B= %.2f)              ",valorDos);
+        printf("\n                    2- Ingresar 2do operando: (B= %d)              ",valorDos);
         printf("\n         |                                                           |");
         printf("\n                    3- Calcular todas las operaciones                 ");
         printf("\n         |                                                           |");
@@ -34,7 +35,7 @@ int main()
         printf("\n         |                                                           |");
         printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         printf("\n");
-        printf("\n                         Digite la opcion elegida: ");
+        printf("\n          Digite la opcion elegida: ");
         scanf("%d",&opcion);
         switch(opcion)
         {
@@ -54,32 +55,93 @@ int main()
             printf("\n         *                                                           *");
             printf("\n         #############################################################");
             printf("\n         |                                                           |");
-            printf("\n                    a- Calcular la suma (%.2f+%.2f)                  ",valorUno,valorDos);
+            printf("\n                    a- Calcular la suma (%d+%d)                  ",valorUno,valorDos);
+            int sumarValores(int valorUno, int valorDos);
             printf("\n         |                                                           |");
-            printf("\n                    b- Calcular la resta (%.2f-%.2f)                 ",valorUno,valorDos);
+            printf("\n                    b- Calcular la resta (%d-%d)                 ",valorUno,valorDos);
+            int restarValores(int valorUno, int valorDos);
             printf("\n         |                                                           |");
-            printf("\n                    c- Calcular la division (%.2f/%.2f)              ",valorUno,valorDos);
+            if(valorDos!=0)
+            {
+                printf("\n                    c- Calcular la division (%d/%d)              ",valorUno,valorDos);
+                valorUno=(float)valorUno;
+                valorDos=(float)valorDos;
+                float dividirValores(float valorUno, float valorDos);
+            }
+            else
+            {
+                printf("\n                    c- No es posible dividir por cero.");
+            }
             printf("\n         |                                                           |");
-            printf("\n                    d- Calcular la multiplicacion (%.2f*%.2f)        ",valorUno,valorDos);
+            printf("\n                    d- Calcular la multiplicacion (%d*%d)        ",valorUno,valorDos);
+            int multiplicarValores(int valorUno, int valorDos);
             printf("\n         |                                                           |");
-            printf("\n                    e- Calcular el factorial (%.2f!) (%.2f!)         ",valorUno,valorDos);
+            if (valorUno>=0 && valorDos>=0)
+            {
+                printf("\n                    e- Calcular el factorial (%d!) (%d!)         ",valorUno,valorDos);
+                int factorial (int valorUno, int valorDos);
+            }
+            else
+            {
+                printf("\n        e-  No se puede obtener el factorial de uno o ambos valores ");
+            }
             printf("\n         |                                                           |");
             printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
             printf("\n");
-            float sumarValores(float valorUno, float valorDos);
-            float restarValores(float valorUno, float valorDos);
-            float multiplicarValores(float valorUno, float valorDos);
-            float dividirValores(float valorUno, float valorDos);
-            float factorial (float valorUno, float valorDos);
             system("Pause");
+            validacion=1;
             break;
         case 4:
             system("cls");
-            printf("\n          a- La suma de los valores es: %.2f\n",sumarValores(valorUno,valorDos));
-            printf("\n          b- La resta de los valores es: %.2f\n",restarValores(valorUno,valorDos));
-            dividirValores(valorUno,valorDos);
-            printf("\n          c- La multiplicacion de los valores es: %.2f\n",multiplicarValores(valorUno,valorDos));
-            factorial(valorUno,valorDos);
+            if (validacion==1)
+            {
+        printf("\n         #############################################################");
+        printf("\n         *                                                           *");
+        printf("\n         *                      >> Resultados <<                     *");
+        printf("\n         *                                                           *");
+        printf("\n         #############################################################");
+        printf("\n         |                                                           |");
+        printf("\n                    a- La suma de los valores es: %d                  ",sumarValores(valorUno,valorDos));
+        printf("\n         |                                                           |");
+        printf("\n                    b- La resta de los valores es: %d                 ",restarValores(valorUno,valorDos));
+        printf("\n         |                                                           |");
+                  if(valorDos!=0)
+            {
+        printf("\n                    c- La division de los valores es de: %.2f         ",dividirValores(valorUno,valorDos));
+            }
+            else
+            {
+                printf("\n                    c- No es posible dividir por cero.");
+            }
+        printf("\n         |                                                           |");
+        printf("\n                    d- La multiplicacion de los valores es: %d        ",multiplicarValores(valorUno,valorDos));
+        printf("\n         |                                                           |");
+                    if (valorUno>=0 && valorDos>=0)
+            {
+               factorial (valorUno, valorDos);
+            }
+            else
+            {
+        printf("\n           e-  No se puede obtener el factorial de uno o ambos valores ");
+            }
+        printf("\n         |                                                           |");
+        printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        printf("\n");
+            }
+            else {
+        printf("\n         #############################################################");
+        printf("\n         *                                                           *");
+        printf("\n         *                      >> Resultados <<                     *");
+        printf("\n         *                                                           *");
+        printf("\n         #############################################################");
+        printf("\n                                                                      ");
+        printf("\n         |                                                           |");
+        printf("\n                      Primero debe realizar los calculos              ");
+        printf("\n         |                                                           |");
+        printf("\n                                                                      ");
+        printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        printf("\n");
+            }
             system("Pause");
             break;
         case 5:
@@ -90,12 +152,7 @@ int main()
             printf("El valor ingresado no pertenece a una opcion existente \n");
             system("Pause");
         }
-        }
-        system("Pause");
-        return 0;
     }
-
-
-
-
-    //movilizar los ifs al main para delucidar los valores negativos y fallos de div y factorial
+    system("Pause");
+    return 0;
+}
