@@ -61,31 +61,18 @@ int main()
             printf("\n                    b- Calcular la resta (%d-%d)                 ",valorUno,valorDos);
             int restarValores(int valorUno, int valorDos);
             printf("\n         |                                                           |");
-            if(valorDos!=0)
-            {
-                printf("\n                    c- Calcular la division (%d/%d)              ",valorUno,valorDos);
+            printf("\n                    c- Calcular la division (%d/%d)              ",valorUno,valorDos);
                 valorUno=(float)valorUno;
                 valorDos=(float)valorDos;
                 float dividirValores(float valorUno, float valorDos);
-            }
-            else
-            {
-                printf("\n                    c- No es posible dividir por cero.");
-            }
             printf("\n         |                                                           |");
             printf("\n                    d- Calcular la multiplicacion (%d*%d)        ",valorUno,valorDos);
             int multiplicarValores(int valorUno, int valorDos);
             printf("\n         |                                                           |");
-            if (valorUno>=0 && valorDos>=0)
-            {
-                printf("\n                    e- Calcular el factorial (%d!) (%d!)         ",valorUno,valorDos);
+
+            printf("\n                    e- Calcular el factorial (%d!) (%d!)         ",valorUno,valorDos);
                 int factorial (int valorUno);
                 int factorial (int valorDos);
-            }
-            else
-            {
-                printf("\n        e-  No se puede obtener el factorial de uno o ambos valores ");
-            }
             printf("\n         |                                                           |");
             printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
             printf("\n");
@@ -117,16 +104,23 @@ int main()
         printf("\n         |                                                           |");
         printf("\n                     La multiplicacion de los valores es: %d        ",multiplicarValores(valorUno,valorDos));
         printf("\n         |                                                           |");
-                    if (valorUno>=0 && valorDos>=0)
+                    if (valorUno>=0)
             {
                factorial (valorUno);
-        printf("\n         |                                                           |");
-               factorial (valorDos);
             }
             else
             {
-        printf("\n             No se puede obtener el factorial de uno o ambos valores ");
+                        printf("\n                No se puede obtener el factorial de este valor ");
             }
+                   printf("\n         |                                                           |");
+
+            if (valorDos>=0)
+            {
+             factorial (valorDos);
+            }
+            else {
+                    printf("\n                No se puede obtener el factorial de este valor ");
+}
         printf("\n         |                                                           |");
         printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         printf("\n");
