@@ -28,22 +28,15 @@ int multiplicarValores(int a, int b)
 {
     return a*b;
 }
-int factorial(int a, int b)
+int factorial(int a)
 {
     long long int factorA;
-    long long int factorB;
     int factorialDeA;
-    int factorialDeB;
     factorA=1;
-    factorB=1;
     for (factorialDeA = a; factorialDeA >= 1; factorialDeA--)
         {
             factorA = factorA * factorialDeA;
         }
-        for (factorialDeB = b; factorialDeB >= 1; factorialDeB--)
-        {
-            factorB = factorB * factorialDeB;
-        }
-        return printf("\n                 e- El factorial del valor %d es: %d y el de %d es: %d \n",a,factorA,b,factorB);
+        return printf("\n                     El factorial del valor %d es: %d ",a,factorA);
 
 }

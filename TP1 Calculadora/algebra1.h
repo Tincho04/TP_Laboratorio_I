@@ -57,6 +57,6 @@ int multiplicarValores(int, int);
  * \return int retorna factorial
  *
  */
-int factorial(int, int);
+int factorial(int);
 
 #endif // algebra1

@@ -79,7 +79,8 @@ int main()
             if (valorUno>=0 && valorDos>=0)
             {
                 printf("\n                    e- Calcular el factorial (%d!) (%d!)         ",valorUno,valorDos);
-                int factorial (int valorUno, int valorDos);
+                int factorial (int valorUno);
+                int factorial (int valorDos);
             }
             else
             {
@@ -101,28 +102,30 @@ int main()
         printf("\n         *                                                           *");
         printf("\n         #############################################################");
         printf("\n         |                                                           |");
-        printf("\n                    a- La suma de los valores es: %d                  ",sumarValores(valorUno,valorDos));
+        printf("\n                     La suma de los valores es: %d                  ",sumarValores(valorUno,valorDos));
         printf("\n         |                                                           |");
-        printf("\n                    b- La resta de los valores es: %d                 ",restarValores(valorUno,valorDos));
+        printf("\n                     La resta de los valores es: %d                 ",restarValores(valorUno,valorDos));
         printf("\n         |                                                           |");
                   if(valorDos!=0)
             {
-        printf("\n                    c- La division de los valores es de: %.2f         ",dividirValores(valorUno,valorDos));
+        printf("\n                     La division de los valores es de: %.2f         ",dividirValores(valorUno,valorDos));
             }
             else
             {
-                printf("\n                    c- No es posible dividir por cero.");
+                printf("\n                     No es posible dividir por cero.");
             }
         printf("\n         |                                                           |");
-        printf("\n                    d- La multiplicacion de los valores es: %d        ",multiplicarValores(valorUno,valorDos));
+        printf("\n                     La multiplicacion de los valores es: %d        ",multiplicarValores(valorUno,valorDos));
         printf("\n         |                                                           |");
                     if (valorUno>=0 && valorDos>=0)
             {
-               factorial (valorUno, valorDos);
+               factorial (valorUno);
+        printf("\n         |                                                           |");
+               factorial (valorDos);
             }
             else
             {
-        printf("\n           e-  No se puede obtener el factorial de uno o ambos valores ");
+        printf("\n             No se puede obtener el factorial de uno o ambos valores ");
             }
         printf("\n         |                                                           |");
         printf("\n         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
