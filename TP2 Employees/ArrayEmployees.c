@@ -6,7 +6,6 @@ int iniciarEmpleados (sEmpleado listado[], int tam)
     for (i=0; i<tam; i++)
     {
         listado[i].vacio=1;
-        listado[i].id=0;
     }
     return 0;
 }
@@ -170,20 +169,16 @@ sEmpleado agregarEmpleados()
     while(n==0);
     empleadoBase.sector=atoi(numero);
     empleadoBase.vacio=0;
-
+    empleadoBase.id=cargarIDs();
     return empleadoBase;
 }
 
-void cargarIDs (sEmpleado listado[],int tam)
+int cargarIDs (void)
 {
-    int i;
-    for (i=0;i<tam;i++)
-        {
-        if (listado[i].vacio==0)
-        {
-            listado[i].id=i+1;
-        }
-}
+    static int IDEmpleado=0;
+
+    IDEmpleado++;
+return IDEmpleado;
 }
 
 int buscarLibre(sEmpleado listado[],int tam)

@@ -87,12 +87,12 @@ void correccionApellidos(sEmpleado[], int);
  * \return void
  *
  */
-void cargarIDs(sEmpleado[], int);
+int cargarIDs(void);
 /** \brief Permite la modificacion de algun valor en los datos del empleado por medio de su ID
  *
  * \param sEmpleado[]
- * \param int
- * \return void
+ * \param void
+ * \return int
  *
  */
 void modificarValor (sEmpleado[], int);
