@@ -203,7 +203,7 @@ void cargarLibre (sEmpleado listado[],int tam)
     do
     {
         indice = buscarLibre(listado,tam);
-        if(indice>=-1)
+        if(indice>=0)
         {
             listado[indice]=agregarEmpleados();
                 }
