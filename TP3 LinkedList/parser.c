@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include "string.h"
 #include "LinkedList.h"
 #include "Employee.h"
 
@@ -80,10 +82,10 @@ int parser_SaveToText(FILE* pFile , LinkedList* pArrayListEmployee)
     Employee* auxEmployee;
     int len;
     int i;
-    int bufferId;
-    char bufferNombre[1000];
-    int bufferHorasTrabajadas;
-    int bufferSueldo;
+    int auxId;
+    char auxNombre[1000];
+    int auxHorasTrabajadas;
+    int auxSueldo;
 
     if(pFile != NULL && pArrayListEmployee != NULL)
     {
@@ -92,8 +94,8 @@ int parser_SaveToText(FILE* pFile , LinkedList* pArrayListEmployee)
         for(i=0;i<len;i++)
         {
             auxEmployee = ll_get(pArrayListEmployee,i);
-            employee_getAll(auxEmployee,bufferNombre,&bufferHorasTrabajadas,&bufferSueldo,&bufferId);
-            fprintf(pFile,"%d,%s,%d,%d\n",bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+            employee_getAll(auxEmployee,auxNombre,&auxHorasTrabajadas,&auxSueldo,&auxId);
+            fprintf(pFile,"%d,%s,%d,%d\n",auxId,auxNombre,auxHorasTrabajadas,auxSueldo);
             retorno = 0;
         }
     }
@@ -112,18 +114,27 @@ int parser_SaveToBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {
     int retorno = -1;
     int i = 0;
-    int len;
+    int auxId;
+    char auxNombre[51];
+    int auxHorasTrabajadas;
+    int auxSueldo;
     Employee* auxEmployee;
 
-    if(pFile != NULL && pArrayListEmployee != NULL)
+ if(pFile != NULL)
     {
-        len = ll_len(pArrayListEmployee);
-        while(i != len)
+        retorno = 0;
+        for(i=0;i<ll_len(pArrayListEmployee);i++)
         {
             auxEmployee = ll_get(pArrayListEmployee,i);
-            fwrite(auxEmployee,sizeof(Employee*),1,pFile);
-            retorno = 0;
-            i++;
+            employee_getId(auxEmployee,&auxId);
+            employee_getName(auxEmployee,auxNombre);
+            employee_getHours(auxEmployee,&auxHorasTrabajadas);
+            employee_getSalary(auxEmployee,&auxSueldo);
+            if( auxId > 0 && strlen(auxNombre) > 0 &&
+                auxHorasTrabajadas > 0 && auxSueldo > 0)
+            {
+                fwrite(auxEmployee,sizeof(Employee),1,pFile);
+            }
         }
     }
     return retorno;

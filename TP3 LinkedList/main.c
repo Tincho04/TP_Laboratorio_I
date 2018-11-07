@@ -38,7 +38,7 @@ int main()
             flag = 1;
             break;
         case 2:
-            controller_loadFromBinary("data.bin", listaEmpleados);
+            controller_loadFromBinary("data.dat", listaEmpleados);
             flag = 1;
             break;
         case 3:
@@ -92,7 +92,7 @@ int main()
             system("cls");
             if(flag)
                 {
-                    controller_saveAsBinary("data.bin",listaEmpleados);
+                    controller_saveAsBinary("data.dat",listaEmpleados);
                 {
                     printf("Cargue datos primero para poder guardarlos");
                 }
