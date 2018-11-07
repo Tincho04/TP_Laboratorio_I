@@ -73,6 +73,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     int retorno = -1;
     int sueldo;
     int horasTrabajadas;
+//  int id;
     char nombre[51];
 
     if(!getName(nombre,51,"Ingrese el nombre: ","Reingrese el nombre: ",2)&&
@@ -81,6 +82,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     )
     {
         Employee* empleado = employee_IdGen(nombre,horasTrabajadas,sueldo);
+
         if(empleado != NULL)
         {
             retorno = ll_add(pArrayListEmployee,empleado);

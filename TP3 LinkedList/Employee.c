@@ -78,6 +78,15 @@ int employee_delete(Employee* this)
  * \return int
  *
  */
+
+ int employee_getNextId()
+{
+    static int ultimoId = -1;
+    ultimoId++;
+    return ultimoId;
+}
+
+
 int employee_setName(Employee* this, char* nombre)
 {
     int retorno=-1;
