@@ -24,7 +24,8 @@
 
 int main()
 {
-    int option = 0;
+    int option=0;
+    int flag=0;
     LinkedList* listaEmpleados = ll_newLinkedList();
     do
     {
@@ -34,43 +35,77 @@ int main()
         {
         case 1:
             controller_loadFromText("data.csv",listaEmpleados);
+            flag = 1;
             break;
         case 2:
             controller_loadFromBinary("data.bin", listaEmpleados);
+            flag = 1;
             break;
         case 3:
             system("cls");
             controller_addEmployee(listaEmpleados);
+            flag = 1;
             break;
         case 4:
             system("cls");
+            if(flag!=0)
+            {
+                controller_editEmployee(listaEmpleados);
+            }
+            else printf("Cargue datos primero para poder realizar la modificacion");
             break;
         case 5:
-            system("cls");
+          system("cls");
+            if(flag!=0)
+            {
+                controller_removeEmployee(listaEmpleados);
+            }
+            else printf("Cargue datos primero para poder realizar la eliminacion");
             break;
         case 6:
             system("cls");
-            controller_ListEmployee(listaEmpleados);
+            if(flag!=0)
+            {
+                printf("A continuacion se imprimiran los datos en un salto de 252 empleados a la vez.\n");
+                controller_ListEmployee(listaEmpleados);
+            }
+            else printf("Cargue datos primero para poder realizar la lista");
             break;
         case 7:
             system("cls");
+            if(flag!=0)
+            {
+                controller_sortEmployee(listaEmpleados);
+            }
+            else printf("Cargue datos primero para poder realizar el ordenamiento");
             break;
         case 8:
             system("cls");
-//            controller_saveAsText("salida.csv",listaEmpleados);
-            break;
+            if(flag)
+                {
+                    controller_saveAsText("data.csv",listaEmpleados);
+                {
+                    printf("Cargue datos primero para poder guardarlos");
+                }
+                break;
         case 9:
             system("cls");
-            controller_saveAsBinary("salida.dat",listaEmpleados);
-            break;
+            if(flag)
+                {
+                    controller_saveAsBinary("data.bin",listaEmpleados);
+                {
+                    printf("Cargue datos primero para poder guardarlos");
+                }
+                break;
         case 10:
-            ll_deleteLinkedList(listaEmpleados);
             break;
         default:
             printf("Ingrese una opcion valida \n");
             system("pause");
         }
     }
-    while(option != 10);
-    return 0;
+    }
+    }while(option != 10);
+
+return 0;
 }

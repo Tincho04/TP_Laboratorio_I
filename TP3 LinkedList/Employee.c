@@ -5,28 +5,64 @@
 #include "string.h"
 #include "Validaciones.h"
 
-Employee* employee_new(void)
+
+
+/** \brief Solicita espacio en memoria para un nuevo empleado.
+ *
+ * \return Employee*
+ *
+ */
+Employee* employee_new()
 {
-    return (Employee*) malloc(sizeof(Employee));
+    Employee* this;
+    this=malloc(sizeof(Employee));
+    if(this!=NULL)
+    {
+        return this;
+    }
+    else
+    {
+        return NULL;
+    }
 }
+
+/**
+*\brief llama al Set de datos del empleado.
+*\param idStr char*
+*\param nombreStr char*
+*\param horasTrabajadasStr char*
+*\param sueldoStr char*
+*\return Employee*
+*/
 
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldoStr)
 {
-    Employee* this = NULL;
-
+  Employee* this;
     this = employee_new();
-    if(this == NULL)
-    {
-        employee_delete(this);
-        this = NULL;
-    }
-    return this;
+
+    int idClienteInt = atoi(idStr);
+    int horasTrabajadasInt = atoi(horasTrabajadasStr);
+    int sueldoInt = atoi(sueldoStr);
+
+    if(
+    !employee_setId(this,idClienteInt)&&
+    !employee_setName(this,nombreStr)&&
+    !employee_setHours(this,horasTrabajadasInt)&&
+    !employee_setSalary(this,sueldoInt))
+        return this;
+    employee_delete(this);
+    return NULL;
 }
 
+/** \brief elimina y libera espacio del empleado que ya no se haya en uso.
+ *
+ * \param this Employee*
+ * \return int
+ *
+ */
 int employee_delete(Employee* this)
 {
-    int retorno = -1;
-
+   int retorno = -1;
     if(this != NULL)
     {
         free(this);
@@ -35,233 +71,230 @@ int employee_delete(Employee* this)
     return retorno;
 }
 
-int employee_altaEmployee(LinkedList* pArrayEmployee)
-{
-    char auxNombre[1024];
-    char auxID[1024] = "-1";
-    int auxHoras;
-    char bufferHorasTrabajadas[1024];
-    int auxSueldo;
-    char bufferSueldo[1024];
-    Employee* auxPunteroEmployee;
-    int retorno = -1;
-
-    strcpy(auxNombre, getString("Ingrese nombre del empleado: ", 30));
-    auxHoras = getInt("Ingrese horas trabajadas: ");
-    auxSueldo = getInt("Ingrese sueldo: ");
-
-    itoa(auxHoras, bufferHorasTrabajadas, 10);
-    itoa(auxSueldo, bufferSueldo, 10);
-    auxPunteroEmployee = employee_newParametros(auxID, auxNombre, bufferHorasTrabajadas, bufferSueldo);
-
-    if(auxPunteroEmployee != NULL)
-    {
-        ll_add(pArrayEmployee, auxPunteroEmployee);
-        retorno = 0;
-    }
-
-    return retorno;
-}
-
+/** \brief set del nombre del empleado.
+ *
+ * \param this Employee*
+ * \param nombre char*
+ * \return int
+ *
+ */
 int employee_setName(Employee* this, char* nombre)
 {
-    int retorno = -1;
-
-    if(this != NULL && strlen(nombre) >= 3)
+    int retorno=-1;
+    if(this!=NULL && nombre!=NULL)
     {
         strcpy(this->nombre,nombre);
-        retorno = 0;
+        retorno=0;
     }
     return retorno;
 }
 
+/** \brief funcion get para tomar el nombre del empleado.
+ *
+ * \param this Employee*
+ * \param nombre char*
+ * \return int
+ *
+ */
 int employee_getName(Employee* this, char* nombre)
 {
-    int retorno = -1;
-
-    if(this != NULL && nombre != NULL)
+   int retorno=-1;
+    if(this!=NULL && nombre!=NULL)
     {
         strcpy(nombre,this->nombre);
-        retorno = 0;
+        retorno=0;
     }
     return retorno;
 }
 
-int employee_setHours(Employee* this, char* horasTrabajadas)
+/** \brief set de las horas trabajadas por el empleado.
+ *
+ * \param this Employee*
+ * \param horasTrabajadas int
+ * \return int
+ *
+ */
+int employee_setHours(Employee* this,int horasTrabajadas)
 {
-    int retorno = -1;
-
-    if(this != NULL && isValidHours(horasTrabajadas) == 0)
+    int retorno=-1;
+    if(this!=NULL)
     {
-        this->horasTrabajadas =  atoi(horasTrabajadas);
-        retorno = 0;
+        this->horasTrabajadas=horasTrabajadas;
+        retorno=0;
     }
     return retorno;
 }
 
+/** \brief funcion get para tomar las horas trabajadas del empleado.
+ *
+ * \param this Employee*
+ * \param horasTrabajadas int*
+ * \return int
+ *
+ */
 int employee_getHours(Employee* this, int* horasTrabajadas)
 {
-    int retorno = -1;
-
-    if(this != NULL && horasTrabajadas != NULL)
+    int retorno=-1;
+    if(this!=NULL)
     {
-        *horasTrabajadas = this->horasTrabajadas;
-        retorno = 0;
+        *horasTrabajadas=this->horasTrabajadas;
+        retorno=0;
     }
     return retorno;
 }
 
-int isValidHours(char* horasTrabajadas)
+/** \brief set del sueldo del empleado.
+ *
+ * \param this Employee*
+ * \param sueldo int
+ * \return int
+ *
+ */
+int employee_setSalary(Employee* this, int sueldo)
 {
-    int retorno = -1;
-
-    if(isInt(horasTrabajadas) == -1)
+     int retorno=-1;
+    if(this!=NULL)
     {
-        printf("Las horas trabajadas son invalidas");
-    }
-    else
-    {
-        retorno = 0;
-    }
-
-    return retorno;
-}
-
-int employee_setSalary(Employee* this, char* sueldo)
-{
-    int retorno = -1;
-
-    if(this != NULL && isValidSalary(sueldo))
-    {
-        this->sueldo = atoi(sueldo);
-        retorno = 0;
+        this->sueldo=sueldo;
+        retorno=0;
     }
     return retorno;
 }
 
+/** \brief funcion get para tomar el sueldo del empleado.
+ *
+ * \param this Employee*
+ * \param sueldo int*
+ * \return int
+ *
+ */
 int employee_getSalary(Employee* this, int* sueldo)
 {
-    int retorno = -1;
-
-    if(this != NULL && sueldo != NULL)
+     int retorno=-1;
+    if(this!=NULL)
     {
-        *sueldo = this->sueldo;
-        retorno = 0;
+        *sueldo=this->sueldo;
+        retorno=0;
     }
     return retorno;
 }
 
-int isValidSalary(char* sueldo)
+/** \brief Set del ID del empleado.
+ *
+ * \param this Employee*
+ * \param id int
+ * \return int
+ *
+ */
+int employee_setId(Employee* this,int id)
 {
-    int retorno = -1;
+ int retorno=-1;
+    static int proximoId=-1;
 
-    if(isInt(sueldo) == -1)
+    if(this!=NULL && id==-1)
     {
-        printf("El sueldo ingresado es invalido");
+        proximoId++;
+        this->id=proximoId;
+        retorno=0;
     }
-    else
+    else if(id>proximoId)
     {
-        retorno = 0;
-    }
-
-    return retorno;
-}
-
-int employee_setId(Employee* this, char* id)
-{
-    int siguienteId = -1;
-    int auxId;
-    int retorno = -1;
-
-    atoi(id);
-    if(this != NULL && isValidId(id) == 0)
-    {
-        auxId = atoi(id);
-        if(auxId == -1)
-        {
-            siguienteId++;
-            this->id = siguienteId;
-            retorno = 0;
-        }
-        else if(auxId > siguienteId)
-        {
-            siguienteId = auxId;
-            this->id = siguienteId;
-            retorno = 0;
-        }
+        proximoId=id;
+        this->id=proximoId;
+        retorno=0;
     }
     return retorno;
 }
 
+/** \brief funcion get para tomar el ID del empleado.
+ *
+ * \param this Employee*
+ * \param id int*
+ * \return int
+ *
+ */
 int employee_getId(Employee* this, int* id)
 {
-    int retorno = -1;
-
-    if(this != NULL && id != NULL)
+     int retorno=-1;
+    if(this!=NULL)
     {
-        *id = this->id;
-        retorno = 0;
+        *id=this->id;
+        retorno=0;
     }
     return retorno;
 }
 
-
-int isValidId(char* id)
+/** \brief Generador de empleado y validador de que este no se halle vacio.
+ *
+ * \param nombre char*
+ * \param horasTrabajadas int
+ * \param sueldo int
+ * \return Employee*
+ *
+ */
+Employee* employee_IdGen(char* nombre,int horasTrabajadas,int sueldo)
 {
-    int retorno = -1;
+    Employee* this;
+    this = employee_new();
+    if(
+    !employee_setId(this,-1)&&
+    !employee_setName(this,nombre)&&
+    !employee_setHours(this,horasTrabajadas)&&
+    !employee_setSalary(this,sueldo))
+        return this;
 
-    if(isIntConGuiones(id) == -1)
-    {
-        printf("\El id es invalido");
-    }
-    else
-    {
-        retorno = 0;
-    }
+    employee_delete(this);
+    return NULL;
+}
+
+/** \brief Base a tomar para realizar un ordenamiento de empleados por nombre.
+ *
+ * \param thisA void*
+ * \param thisB void*
+ * \return int
+ *
+ */
+int employee_sortByName(void* thisA,void* thisB)
+{
+    int retorno = 0;
+    char nameA[50];
+    char nameB[50];
+
+   employee_getName(thisA,nameA);
+   employee_getName(thisB,nameB);
+
+   if(strcmp(nameA,nameB)>0)
+   {
+    retorno = 1;
+   }
+   else if(strcmp(nameA,nameB)< 0)
+   {
+    retorno = -1;
+   }
     return retorno;
 }
 
-/*void employee_List(LinkedList* pArrayListEmployee)    FALTA VALIDAR DIMENSIONES DEL FOR
+/** \brief automatizador de datos para realizar todos los gets en una sola funcion.
+ *
+ * \param this Employee*
+ * \param nombre char*
+ * \param horas int*
+ * \param sueldo int*
+ * \param id int*
+ * \return int
+ *
+ */
+int employee_getAll(Employee* this,char* nombre,int* horas,int* sueldo,int* id)
 {
-int i;
-int size=ll_len(pArrayListEmployee);
-for (i=0;i<size;i++)
-    {
-        if(pArrayListEmployee[i]!=NULL)
-            {
-            employee_List(pArrayListEmployee[i]);
-            }
-    }
-}
-*/
-void employee_List(LinkedList* pArrayListEmployee)
-{
-    Employee* auxEmployee;
-    int auxId;
-    char auxNombre[50];
-    int auxHoras;
-    int auxSueldo;
-    int size;
-    int i;
+    int retorno = -1;
 
-    size = ll_len(pArrayListEmployee);
-    if(size > 0)
+    if(this != NULL)
     {
-        printf("ID      Nombre     Horas trabajadas       Sueldo\n");
-        for(i=0; i < size; i++)
-        {
-            auxEmployee = ll_get(pArrayListEmployee, i);
-            if( employee_getId(auxEmployee, &auxId) == 0 && employee_getName(auxEmployee, auxNombre) == 0 &&
-                employee_getHours(auxEmployee, &auxHoras) == 0 &&
-                employee_getSalary(auxEmployee, &auxSueldo) == 0)
-            {
-                printf("%4d %20s %3d %6d\n", auxId, auxNombre, auxHoras, auxSueldo);
-            }
-        }
-        printf("\nLa cantidad de empleados es de: %d.", size);
+        employee_getName(this,nombre);
+        employee_getHours(this,horas);
+        employee_getSalary(this,sueldo);
+        employee_getId(this,id);
+        retorno = 0;
     }
-    else
-    {
-        printf("\n Fallo en carga de lista.\n");
-    }
+    return retorno;
 }

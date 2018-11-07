@@ -190,20 +190,22 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1541534746 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\controller.c
+1541572396 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
+	"controller.h"
+	"Validaciones.h"
 
 1541528679 c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\linkedlist.h
 
-1541528270 c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\employee.h
+1541564902 c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\employee.h
 
-1541512184 c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\parser.h
+1541563655 c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\parser.h
 
-1541534698 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\employee.c
+1541570979 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\employee.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -211,18 +213,20 @@
 	"string.h"
 	"Validaciones.h"
 
-1541534022 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\parser.c
+1541572742 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1541534524 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\validaciones.c
+1541571815 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\validaciones.c
 	<stdio.h>
 	<stdlib.h>
+	<ctype.h>
 	"string.h"
+	"Validaciones.h"
 
-1541533685 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\main.c
+1541572215 source:c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -234,5 +238,5 @@
 
 1541512184 c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\controller.h
 
-1541528270 c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\validaciones.h
+1541567383 c:\users\martin\desktop\nueva carpeta\tp3 linkedlist\validaciones.h
 

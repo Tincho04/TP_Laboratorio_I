@@ -10,23 +10,22 @@ typedef struct
 
 Employee* employee_new();
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldoStr);
-int employee_delete();
-
-int employee_setId(Employee* this,char* id);
+int employee_delete(Employee* this);
+int employee_setId(Employee* this,int id);
 int employee_getId(Employee* this,int* id);
-int isValidId(char* id);
 
 int employee_setName(Employee* this,char* nombre);
 int employee_getName(Employee* this,char* nombre);
 
-int employee_setHours(Employee* this,char* horasTrabajadas);
+int employee_setHours(Employee* this,int horasTrabajadas);
 int employee_getHours(Employee* this,int* horasTrabajadas);
-int isValidHours(char* horasTrabajadas);
 
-int employee_setSalary(Employee* this,char* sueldo);
+
+int employee_setSalary(Employee* this,int sueldo);
 int employee_getSalary(Employee* this,int* sueldo);
-int isValidSalary(char* sueldo);
 
-void employee_List(LinkedList* pArrayListEmployee);
-int employee_altaEmployee(LinkedList* pArrayEmployee);
+Employee* employee_IdGen(char* nombre,int horasTrabajadas,int sueldo);
+int employee_sortByName(void* thisA,void* thisB);
+int employee_getAll(Employee* this,char* nombre,int* horas,int* sueldo,int* id);
+
 #endif // employee_H_INCLUDED

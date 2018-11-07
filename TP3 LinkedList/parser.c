@@ -5,7 +5,7 @@
 
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo texto).
  *
- * \param path char*
+ * \param FILE* pFile
  * \param pArrayListEmployee LinkedList*
  * \return int
  *
@@ -13,32 +13,29 @@
 int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 {
     Employee* pAux;
-    char bufferId[50];
-    char bufferNombre[50];
-    char bufferHorasTrabajadas[50];
-    char bufferSueldo[50];
+    char auxId[50];
+    char auxNombre[50];
+    char auxHorasTrabajadas[50];
+    char auxSueldo[50];
     int flag = 1;
     int retorno = -1;
 
-    while(!feof(pFile))
+    if(pFile!= NULL)
     {
-        if(flag==1)
+        while(!feof(pFile))
         {
-            fscanf(pFile,"%s\n", bufferId);
-            flag = 0;
-        }
-        else if(fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n", bufferId, bufferNombre, bufferHorasTrabajadas, bufferSueldo)==4)
-        {
-            pAux = employee_newParametros(bufferId, bufferNombre, bufferHorasTrabajadas, bufferSueldo);
-            if(pAux != NULL)
+            if(flag)
             {
-                ll_add(pArrayListEmployee, pAux);
-                retorno = 0;
+                fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n", auxId, auxNombre, auxHorasTrabajadas, auxSueldo);
+                flag = 0;
             }
-        }
-        else
-        {
-            break;
+        fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n", auxId, auxNombre, auxHorasTrabajadas, auxSueldo);
+        pAux = employee_newParametros(auxId, auxNombre, auxHorasTrabajadas, auxSueldo);
+            if(pAux !=NULL)
+            {
+            ll_add(pArrayListEmployee,pAux);
+            retorno = 0;
+            }
         }
     }
     return retorno;
@@ -46,27 +43,88 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
  *
- * \param path char*
+ * \param FILE* pFile*
  * \param pArrayListEmployee LinkedList*
  * \return int
  *
  */
 int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 {
-    Employee* auxPunteroEmpleado;
     int retorno = -1;
-    int cantLineas;
+    Employee* pEmpleado;
 
-    do
+    if(pFile != NULL)
     {
-        auxPunteroEmpleado = employee_new();
-        cantLineas = fread(auxPunteroEmpleado, sizeof(Employee), 1, pFile);
-        if(auxPunteroEmpleado != NULL && cantLineas == 1)
+        retorno = 0;
+        while(!feof(pFile))
         {
-            ll_add(pArrayListEmployee, auxPunteroEmpleado);
+            pEmpleado = employee_new();
+            fread(pEmpleado,sizeof(Employee),1,pFile);
+            ll_add(pArrayListEmployee,pEmpleado);
+        }
+    }
+    return retorno;
+}
+
+
+/** \brief Parsea los datos de los empleados para guardar en data.csv (modo texto).
+ *
+ * \param FILE* pFile
+ * \param pArrayListEmployee LinkedList*
+ * \return int
+ *
+ */
+int parser_SaveToText(FILE* pFile , LinkedList* pArrayListEmployee)
+{
+    int retorno = -1;
+    Employee* auxEmployee;
+    int len;
+    int i;
+    int bufferId;
+    char bufferNombre[1000];
+    int bufferHorasTrabajadas;
+    int bufferSueldo;
+
+    if(pFile != NULL && pArrayListEmployee != NULL)
+    {
+        len = ll_len(pArrayListEmployee);
+
+        for(i=0;i<len;i++)
+        {
+            auxEmployee = ll_get(pArrayListEmployee,i);
+            employee_getAll(auxEmployee,bufferNombre,&bufferHorasTrabajadas,&bufferSueldo,&bufferId);
+            fprintf(pFile,"%d,%s,%d,%d\n",bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
             retorno = 0;
         }
     }
-    while(!feof(pFile));
+    return retorno;
+}
+
+/** \brief Parsea los datos de los empleados para guardar en data.bin (modo binario).
+ *
+ * \param FILE* pFile
+ * \param pArrayListEmployee LinkedList*
+ * \return int
+ *
+ */
+
+int parser_SaveToBinary(FILE* pFile , LinkedList* pArrayListEmployee)
+{
+    int retorno = -1;
+    int i = 0;
+    int len;
+    Employee* auxEmployee;
+
+    if(pFile != NULL && pArrayListEmployee != NULL)
+    {
+        len = ll_len(pArrayListEmployee);
+        while(i != len)
+        {
+            auxEmployee = ll_get(pArrayListEmployee,i);
+            fwrite(auxEmployee,sizeof(Employee*),1,pFile);
+            retorno = 0;
+            i++;
+        }
+    }
     return retorno;
 }
