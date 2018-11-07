@@ -66,7 +66,7 @@ int main()
             system("cls");
             if(flag!=0)
             {
-                printf("A continuacion se imprimiran los datos en un salto de 252 empleados a la vez.\n");
+                printf("A continuacion se imprimiran los datos en un salto de 60 empleados a la vez.\n");
                 controller_ListEmployee(listaEmpleados);
             }
             else printf("Cargue datos primero para poder realizar la lista");

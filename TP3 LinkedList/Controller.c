@@ -191,7 +191,15 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
     int i;
     int id, idAux;
     Employee* empleado;
+    char option='n';
 
+    printf("Desea ver la lista de empleados?");
+    scanf("%s", &option);
+    fflush(stdin);
+    if(option=='s')
+    {
+        controller_ListEmployee(pArrayListEmployee);
+    }
     if(pArrayListEmployee != NULL)
     {
         if(!getInt(&id,"Ingrese el ID del empleado a borrar: ","Ingrese un ID valido",0,99999,2))
@@ -237,9 +245,20 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
         retorno = 0;
         for(i=0;i < ll_len(pArrayListEmployee);i++)
         {
-             if(i%252==0)
+             if(i%60==0)
             {
                 system("pause");
+            auxPunteroEmpleado = ll_get(pArrayListEmployee,i);
+            employee_getId(auxPunteroEmpleado,&id);
+            employee_getName(auxPunteroEmpleado,nombre);
+            employee_getSalary(auxPunteroEmpleado,&sueldo);
+            employee_getHours(auxPunteroEmpleado,&horasTrabajadas);
+
+            printf("\nID: %d",id);
+            printf("\nNombre: %s",nombre);
+            printf("\nSueldo: %d",sueldo);
+            printf("\nHoras trabajadas: %d",horasTrabajadas);
+            printf("\n");
             }
             else
             {
