@@ -49,7 +49,6 @@ int main()
             }
             else if(flag==2){
                     controller_addEmployeeBin(listaEmpleados);}
-            flag = 1;
             break;
         case 4:
             system("cls");
@@ -86,7 +85,7 @@ int main()
             break;
         case 8:
             system("cls");
-            if(flag)
+            if(flag!=0)
                 {
                     controller_saveAsText("data.csv",listaEmpleados);
                 {
@@ -95,7 +94,7 @@ int main()
                 break;
         case 9:
             system("cls");
-            if(flag)
+            if(flag!=0)
                 {
                     controller_saveAsBinary("data.dat",listaEmpleados);
                 {

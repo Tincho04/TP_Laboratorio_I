@@ -71,6 +71,18 @@ int employee_delete(Employee* this)
     return retorno;
 }
 
+ /** \brief Generador del siguiente nro de ID.
+  *
+  * \return int
+  *
+  */
+int employee_getNextId()
+{
+    static int ultimoId = -1;
+    ultimoId++;
+    return ultimoId;
+}
+
 /** \brief set del nombre del empleado.
  *
  * \param this Employee*
@@ -78,14 +90,6 @@ int employee_delete(Employee* this)
  * \return int
  *
  */
-
- int employee_getNextId()
-{
-    static int ultimoId = -1;
-    ultimoId++;
-    return ultimoId;
-}
-
 
 int employee_setName(Employee* this, char* nombre)
 {
