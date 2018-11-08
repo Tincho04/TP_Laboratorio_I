@@ -44,6 +44,75 @@ int getName(char* pNombre, int limite, char* msg, char* msgErr, int reintentos)
     return retorno;
 }
 
+/** \brief Funcion que obtiene un texto y lo valida.
+ *
+ * \param pTexto char*
+ * \param limite int
+ * \param mensaje char*
+ * \param mensajeError char*
+ * \param reintentos int
+ * \return int
+ *
+ */
+int getText(char *pTexto, int limite, char *mensaje,char *mensajeError, int reintentos)
+{
+    int retorno=-1;
+    char buffer[BUFFST];
+    if( pTexto != NULL && limite > 0 && mensaje != NULL &&
+        mensajeError != NULL && reintentos>=0)
+    {
+        do
+        {
+            reintentos--;
+            printf("\n%s", mensaje);
+            if( getString(buffer, limite) == 0 &&
+                isValidText(buffer, limite))
+            {
+                strncpy(pTexto, buffer, limite);
+                retorno = 0;
+                break;
+            }
+            else
+            {
+                printf("\n%s", mensajeError);
+            }
+        }
+        while(reintentos>=0);
+    }
+    return retorno;
+}
+
+/** \brief Funcion validadora de texto.
+ *
+ * \param pBuffer char*
+ * \param limite int
+ * \return int
+ *
+ */
+int isValidText(char *pBuffer, int limite)
+{
+    int retorno = 0;
+    int i;
+    if(pBuffer != NULL && limite > 0 && strlen(pBuffer) > 0)
+    {
+        retorno = 1;
+        for(i=0; i < limite && pBuffer[i] != '\0'; i++)
+        {
+            if(!(   (pBuffer[i] >= ' ' && pBuffer[i] <= '"') ||
+                     pBuffer[i] == '(' || pBuffer[i] == ')' ||
+                    (pBuffer[i] >= ',' && pBuffer[i] <= '.') ||
+                    (pBuffer[i] >= '0' && pBuffer[i] <= ';') ||
+                    (pBuffer[i] >= '?' && pBuffer[i] <= 'Z') ||
+                    (pBuffer[i] >= 'a' && pBuffer[i] <= 'z')))
+            {
+                retorno = 0;
+                break;
+            }
+        }
+    }
+    return retorno;
+}
+
 /** \brief funcion que toma y valida una cadena string.
  *
  * \param pBuffer char*
@@ -60,6 +129,7 @@ int getString(char* pBuffer, int limite)
     {
         fflush(stdin);
         fgets(bufferStr,limite,stdin);
+        fflush(stdin);
         len = strlen(bufferStr);
         if(len != limite-1 ||  bufferStr[limite-2] == '\n')
         {

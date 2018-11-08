@@ -61,19 +61,18 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
     return retorno;
 }
 
-/** \brief Alta de empleados.
+/** \brief Alta de empleados de modo texto.
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
  * \return int
  *
  */
-int controller_addEmployee(LinkedList* pArrayListEmployee)
+int controller_addEmployeeTxt(LinkedList* pArrayListEmployee)
 {
     int retorno = -1;
     int sueldo;
     int horasTrabajadas;
-//  int id;
     char nombre[51];
 
     if(!getName(nombre,51,"Ingrese el nombre: ","Reingrese el nombre: ",2)&&
@@ -89,6 +88,39 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
         }
     }
 
+    return retorno;
+}
+
+/** \brief Alta de empleados de modo binario.
+ *
+ * \param pArrayListEmployee LinkedList*
+ * \return int
+ *
+ */
+int controller_addEmployeeBin(LinkedList* pArrayListEmployee)
+{
+    int retorno = -1;
+    Employee* pEmpleado;
+    char auxIdString[20];
+    int auxIdInt;
+    char auxNombre[51];
+    char auxHorasTrabajadas[20];
+    char auxSueldo[20];
+    if( pArrayListEmployee != NULL &&
+        !getText(auxNombre,51,"Ingrese el nombre: ","Reingrese el nombre:",0) &&
+        !getText(auxHorasTrabajadas,20,"Ingrese las horas: ", "Reingrese las horas:",0) &&
+        !getText(auxSueldo,20,"Ingrese el sueldo: ","Reingrese el sueldo:",0))
+    {
+        auxIdInt = employee_getNextId();
+        snprintf(auxIdString, 20*sizeof(char), "%d", auxIdInt);
+        pEmpleado = employee_newParametros(  auxIdString,auxNombre,
+                                                auxHorasTrabajadas,auxSueldo);
+        if(pEmpleado != NULL)
+        {
+            ll_add(pArrayListEmployee, pEmpleado);
+            retorno = 0;
+        }
+    }
     return retorno;
 }
 

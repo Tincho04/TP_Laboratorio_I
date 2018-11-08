@@ -39,11 +39,16 @@ int main()
             break;
         case 2:
             controller_loadFromBinary("data.dat", listaEmpleados);
-            flag = 1;
+            flag = 2;
             break;
         case 3:
             system("cls");
-            controller_addEmployee(listaEmpleados);
+            if(flag==1)
+            {
+                controller_addEmployeeTxt(listaEmpleados);
+            }
+            else if(flag==2){
+                    controller_addEmployeeBin(listaEmpleados);}
             flag = 1;
             break;
         case 4:
