@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1542148344 source:c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"controller.h"
+	"Validaciones.h"
+
+1542148344 c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\linkedlist.h
+
+1542148344 c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\employee.h
+
+1542148344 c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\parser.h
+
+1542148344 c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\controller.h
+
+1542148344 c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\validaciones.h
+
+1542148344 source:c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"string.h"
+	"Validaciones.h"
+
+1542148685 source:c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"parser.h"
+
+1542148344 source:c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"string.h"
+	"Validaciones.h"
+	"parser.h"
+
+1542148344 source:c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"string.h"
+	"LinkedList.h"
+	"Employee.h"
+
+1542148986 source:c:\users\alumno\desktop\nueva carpeta\tp 5 - merge\tp5\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"string.h"
+	"Validaciones.h"
+
