@@ -4116,3 +4116,489 @@
 
 1532345168 /home/profesor/Descargas/linkedlist_cascara_v4/testing/inc/main_test.h
 
+1541034030 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\addnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\utest.h
+
+1532345152 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\inc\linkedlist.h
+
+1532345166 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\employee.h
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\addtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\cleartest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\clonetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\containsalltest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\containstest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\deletelinkedlisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/Employee.h"
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\getnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\gettest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\indexoftest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\isemptytest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\lentest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1541034030 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\main_test.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	"../inc/newTest.h"
+	"../inc/addTest.h"
+	"../inc/getNodeTest.h"
+	"../inc/addNodeTest.h"
+	"../inc/deleteLinkedListTest.h"
+	"../inc/lenTest.h"
+	"../inc/getTest.h"
+	"../inc/containsTest.h"
+	"../inc/setTest.h"
+	"../inc/removeTest.h"
+	"../inc/clearTest.h"
+	"../inc/cloneTest.h"
+	"../inc/pushTest.h"
+	"../inc/indexOfTest.h"
+	"../inc/isEmptyTest.h"
+	"../inc/popTest.h"
+	"../inc/subListTest.h"
+	"../inc/containsAllTest.h"
+	"../inc/sortTest.h"
+
+1532345166 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\newtest.h
+
+1532345170 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\addtest.h
+
+1532345168 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\getnodetest.h
+
+1541034030 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\addnodetest.h
+
+1532345168 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\deletelinkedlisttest.h
+
+1532345168 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\lentest.h
+
+1532345166 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\gettest.h
+
+1532345168 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\containstest.h
+
+1532345170 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\settest.h
+
+1532345170 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\removetest.h
+
+1532345170 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\cleartest.h
+
+1532345166 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\clonetest.h
+
+1532345168 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\pushtest.h
+
+1532345166 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\indexoftest.h
+
+1532345166 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\isemptytest.h
+
+1532345170 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\poptest.h
+
+1532345168 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\sublisttest.h
+
+1532345166 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\containsalltest.h
+
+1532345170 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\sorttest.h
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\newtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+
+1532345174 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\poptest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\pushtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\removetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\settest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\sorttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\src\sublisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\utest.c
+	"utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1541910903 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\src\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/LinkedList.h"
+
+1541908419 source:m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../testing/inc/main_test.h"
+	"../inc/LinkedList.h"
+
+1532345168 m:\martin\descargas\ejercicios propuestos y resueltos en c\tp4 linkedlist-cascara\testing\inc\main_test.h
+
+1541034030 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\addnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\utest.h
+
+1542073793 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\inc\linkedlist.h
+
+1532345166 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\employee.h
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\addtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\cleartest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\clonetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\containsalltest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\containstest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\deletelinkedlisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/Employee.h"
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\getnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\gettest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\indexoftest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\isemptytest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\lentest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1541034030 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\main_test.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	"../inc/newTest.h"
+	"../inc/addTest.h"
+	"../inc/getNodeTest.h"
+	"../inc/addNodeTest.h"
+	"../inc/deleteLinkedListTest.h"
+	"../inc/lenTest.h"
+	"../inc/getTest.h"
+	"../inc/containsTest.h"
+	"../inc/setTest.h"
+	"../inc/removeTest.h"
+	"../inc/clearTest.h"
+	"../inc/cloneTest.h"
+	"../inc/pushTest.h"
+	"../inc/indexOfTest.h"
+	"../inc/isEmptyTest.h"
+	"../inc/popTest.h"
+	"../inc/subListTest.h"
+	"../inc/containsAllTest.h"
+	"../inc/sortTest.h"
+
+1532345166 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\newtest.h
+
+1532345170 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\addtest.h
+
+1532345168 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\getnodetest.h
+
+1541034030 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\addnodetest.h
+
+1532345168 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\deletelinkedlisttest.h
+
+1532345168 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\lentest.h
+
+1532345166 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\gettest.h
+
+1532345168 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\containstest.h
+
+1532345170 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\settest.h
+
+1532345170 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\removetest.h
+
+1532345170 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\cleartest.h
+
+1532345166 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\clonetest.h
+
+1532345168 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\pushtest.h
+
+1532345166 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\indexoftest.h
+
+1532345166 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\isemptytest.h
+
+1532345170 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\poptest.h
+
+1532345168 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\sublisttest.h
+
+1532345166 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\containsalltest.h
+
+1532345170 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\sorttest.h
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\newtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+
+1532345174 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\poptest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\pushtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\removetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\settest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\sorttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\src\sublisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\utest.c
+	"utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1541908419 source:c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../testing/inc/main_test.h"
+	"../inc/LinkedList.h"
+
+1532345168 c:\users\martin\desktop\utn\trabajos practicos\tp4 linkedlist-cascara\testing\inc\main_test.h
+
