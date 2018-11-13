@@ -17,6 +17,6 @@ TP4 LinkedList-Cascara
 
 > Desarrollo del .C de LinkedList. (Datos dinamicos)
 
-TP 5 - Merge
+TP5 Merge
 
 > Combinacion del TP3 utilizando el .C desarrollado en el TP4 (Datos dinamicos)
